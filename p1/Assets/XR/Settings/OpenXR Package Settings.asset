@@ -120,13 +120,10 @@ MonoBehaviour:
     enabled: 1
   forceRemoveInternetPermission: 0
   symmetricProjection: 0
-  foveatedRenderingApi: 0
   systemSplashScreen: {fileID: 0}
   optimizeBufferDiscards: 1
   lateLatchingMode: 0
   lateLatchingDebug: 0
-  optimizeMultiviewRenderRegions: 0
-  spacewarpMotionVectorTextureFormat: 0
 --- !u!114 &-7651444261642329009
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -706,37 +703,31 @@ MonoBehaviour:
   - {fileID: 2397831325343506104}
   - {fileID: 534372408219390726}
   - {fileID: 2220668358677977628}
-  - {fileID: -2085283451462489038}
   - {fileID: -1658558677666683373}
   - {fileID: -5555933268458624605}
+  - {fileID: -2085283451462489038}
   - {fileID: -7364314880709510119}
   - {fileID: -8573004395798530831}
   - {fileID: 8516567797373517004}
   - {fileID: -3871008742241394769}
   - {fileID: -3074976412146771466}
   - {fileID: -7865615816513959287}
-  - {fileID: -4730203468473231938}
   - {fileID: -8153322839314061374}
   - {fileID: -5012159279858275745}
-  - {fileID: -4109811274138568830}
   - {fileID: 5902761865400158176}
   - {fileID: 7099182826489412601}
   - {fileID: 7682267363657084821}
+  - {fileID: -4261324486109222989}
   - {fileID: 8415051572012015998}
   - {fileID: 1913413387471175471}
   - {fileID: 1354188638464708329}
   - {fileID: 2000358917521013163}
   - {fileID: 198557351739529500}
+  - {fileID: -4109811274138568830}
   - {fileID: 4435611982978080986}
   - {fileID: 6405985368370813290}
-  - {fileID: -4214805593051015751}
-  - {fileID: -4261324486109222989}
   m_renderMode: 1
-  m_autoColorSubmissionMode: 1
-  m_colorSubmissionModes:
-    m_List: 00000000
   m_depthSubmissionMode: 0
-  m_spacewarpMotionVectorTextureFormat: 0
   m_optimizeBufferDiscards: 0
   m_symmetricProjection: 0
 --- !u!114 &1354188638464708329
@@ -1105,7 +1096,6 @@ MonoBehaviour:
   - {fileID: -769635547301680947}
   - {fileID: -1320160215655953225}
   - {fileID: -3737171228724074724}
-  - {fileID: -7007805821941227037}
   - {fileID: -8460480208736973418}
   - {fileID: -5213582278469791014}
   - {fileID: -2831775230714672086}
@@ -1114,13 +1104,8 @@ MonoBehaviour:
   - {fileID: 5297006956957839353}
   - {fileID: -9091011491014432746}
   - {fileID: -2836684704862557125}
-  - {fileID: 1873908657422479042}
   m_renderMode: 1
-  m_autoColorSubmissionMode: 1
-  m_colorSubmissionModes:
-    m_List: 00000000
   m_depthSubmissionMode: 0
-  m_spacewarpMotionVectorTextureFormat: 0
   m_optimizeBufferDiscards: 0
   m_symmetricProjection: 0
 --- !u!114 &8046403562899859607

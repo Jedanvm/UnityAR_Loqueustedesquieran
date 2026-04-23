@@ -1,0 +1,694 @@
+{
+    "version": 1,
+    "name": "InputActionAsset1",
+    "maps": [
+        {
+            "name": "Right Controller",
+            "id": "cfd7201d-8f68-412f-807c-dd6586ca5895",
+            "actions": [
+                {
+                    "name": "Trigger",
+                    "type": "Value",
+                    "id": "e8369e1f-fe07-4105-9455-724c75c374f0",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "TriggerButton",
+                    "type": "Button",
+                    "id": "23e5ffeb-2c28-49ae-b536-899ad350ca87",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Grip",
+                    "type": "Value",
+                    "id": "19fc8ff9-c057-42f4-ad2c-20321275c456",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "GripButton",
+                    "type": "Button",
+                    "id": "ad4d563d-4662-46f2-abb8-9d7aad86e70c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PrimaryButton",
+                    "type": "Button",
+                    "id": "cacbb871-7008-4592-aae0-60f77639cb71",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SecondaryButton",
+                    "type": "Button",
+                    "id": "bb273de5-3d55-4216-8f62-bc245cdaef26",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MenuButton",
+                    "type": "Button",
+                    "id": "4a38ed8a-074d-48da-928d-6cb6e1cdc7b9",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "StickButton",
+                    "type": "Button",
+                    "id": "ee0eabf8-3327-463c-a972-f236c265a127",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Stick",
+                    "type": "Value",
+                    "id": "2ba8d176-7b81-4dc3-8069-b44af9f08af4",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Stick North",
+                    "type": "Value",
+                    "id": "4c93dc32-1bc2-4f2d-bc13-d798cd4776ac",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Stick South",
+                    "type": "Value",
+                    "id": "ef3e0f55-7afe-413e-b4ac-3d31216277ec",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Stick East",
+                    "type": "Value",
+                    "id": "13142cdd-972a-4f10-b4c7-24ddc9b3649e",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Stick West",
+                    "type": "Value",
+                    "id": "63c311c9-3b09-4e72-afb5-375a5ad38ed8",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Position",
+                    "type": "Value",
+                    "id": "dd7657ed-ae1f-4f4e-be02-2d29a60aafba",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Rotation",
+                    "type": "Value",
+                    "id": "98491ab5-b7a2-47d3-aa1d-b711086a1ff8",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1bad9635-494d-4dc1-9c64-b5f8b016e823",
+                    "path": "<XRController>{RightHand}/{Trigger}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "Trigger",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "e4190539-19e4-47e5-9362-fc05acb092de",
+                    "path": "<XRController>{RightHand}/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "TriggerButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6f2bc4c0-5bba-4550-a500-007b61b2791c",
+                    "path": "<XRController>{RightHand}/{Grip}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "Grip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2a2c2385-1c3a-4101-b374-df802c1778f3",
+                    "path": "<XRController>{RightHand}/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "GripButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1e592a7c-d145-445a-9b54-547bed2e8fb3",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "PrimaryButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a3f1deea-fca5-4250-993b-d6e2ef4a9a5a",
+                    "path": "<XRController>{RightHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "SecondaryButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d9a460ed-89f9-43da-a961-8ab564d61ed2",
+                    "path": "<XRController>{RightHand}/{MenuButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "MenuButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ecd0ad53-f416-46a2-8d61-552ee61607cd",
+                    "path": "<XRController>{RightHand}/{Primary2DAxisClick}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "StickButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4814ed9c-b093-40f7-980b-88dfc888ffc3",
+                    "path": "<XRController>{RightHand}/{Primary2DAxis}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "Stick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8ed1bd6d-b117-47a2-939b-c4ab99502d12",
+                    "path": "<XRController>{RightHand}/{Primary2DAxis}",
+                    "interactions": "Sector(directions=1)",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "Stick North",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4571ebe7-acfd-445a-904d-7a60108123f2",
+                    "path": "<XRController>{RightHand}/{Primary2DAxis}",
+                    "interactions": "Sector(directions=2)",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "Stick South",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d806e920-17f5-415f-98ec-287c3583fbab",
+                    "path": "<XRController>{RightHand}/{Primary2DAxis}",
+                    "interactions": "Sector(directions=4)",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "Stick East",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "58d351d2-fe29-4f5d-84c1-06ac2de5a511",
+                    "path": "<XRController>{RightHand}/{Primary2DAxis}",
+                    "interactions": "Sector(directions=8)",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "Stick West",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dcd1c209-eaa8-4c77-a350-59af470a40ca",
+                    "path": "<XRController>{RightHand}/{DevicePosition}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7a423b58-751f-4116-824b-d2dd9a6e0ffe",
+                    "path": "<XRController>{RightHand}/{DeviceRotation}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Left Controller",
+            "id": "25b794af-6109-4338-9450-99b9595e7b98",
+            "actions": [
+                {
+                    "name": "Trigger",
+                    "type": "Value",
+                    "id": "94063e7d-96ac-4dbb-b3b7-2f58860dafa5",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "TriggerButton",
+                    "type": "Button",
+                    "id": "c8a7b80f-0f2b-4f7e-b67c-41fe2101a644",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Grip",
+                    "type": "Value",
+                    "id": "6121c169-e154-406c-84d1-538aa5707d21",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "GripButton",
+                    "type": "Button",
+                    "id": "cc17d0f1-6044-4bdd-b420-3430854694df",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PrimaryButton",
+                    "type": "Button",
+                    "id": "6e2cd861-f9e7-4699-9d65-18b67b0087e2",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "SecondaryButton",
+                    "type": "Button",
+                    "id": "4b41fda4-2fd7-4d01-9d7e-31aa342aa61c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MenuButton",
+                    "type": "Button",
+                    "id": "d9481c0e-9944-43e4-a30f-572dd02a9f44",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "StickButton",
+                    "type": "Button",
+                    "id": "b1fa19d8-92c6-4fa9-9510-39251f0965e4",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Stick",
+                    "type": "Value",
+                    "id": "2cf7f08b-dc8e-4a7c-93a3-d08a08480348",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Stick North",
+                    "type": "Value",
+                    "id": "5ba6fbf4-0965-4996-8425-06ed4bc083e8",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Stick South",
+                    "type": "Value",
+                    "id": "217f970c-dd89-4f46-bc35-2bcfe03adefa",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Stick East",
+                    "type": "Value",
+                    "id": "ef649ca6-5079-4cb6-854f-1c156df3620d",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Stick West",
+                    "type": "Value",
+                    "id": "0c592a30-dee3-406c-b7f1-dc8d9f565a75",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Position",
+                    "type": "Value",
+                    "id": "71a8ad2d-6b21-48a9-a1e7-3aa4d516d4dc",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Rotation",
+                    "type": "Value",
+                    "id": "a979d1ee-a8bb-44c6-b3f5-0e41a54c1f3a",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "794635b1-d03d-4e57-96e4-7edfa2739165",
+                    "path": "<XRController>{LeftHand}/{Trigger}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "Trigger",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0b9a8f22-55b6-46d1-b7f2-3a345de7a40a",
+                    "path": "<XRController>{LeftHand}/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "TriggerButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b76ec1a6-51f4-4259-af33-1181f81523a7",
+                    "path": "<XRController>{LeftHand}/{Grip}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "Grip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2478c9af-27c1-4fee-b1de-1df83599c694",
+                    "path": "<XRController>{LeftHand}/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "GripButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4dd2684f-2ccd-4c66-a19a-88c7c69d74c4",
+                    "path": "<XRController>{LeftHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "PrimaryButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eb110174-bb52-4c56-9b73-3fe72d825f10",
+                    "path": "<XRController>{LeftHand}/{SecondaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "SecondaryButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "64789dda-4997-4cd5-8cf1-8022c4a764c8",
+                    "path": "<XRController>{LeftHand}/{MenuButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "MenuButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b211f3c8-96d9-4823-8514-3b5e338034f4",
+                    "path": "<XRController>{LeftHand}/{Primary2DAxisClick}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "StickButton",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "45510a5e-a3cb-489e-94b5-02b5d0e4e2f3",
+                    "path": "<XRController>{LeftHand}/{Secondary2DAxis}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "Stick",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "36665c17-28c7-45a3-8f61-7289077a1c39",
+                    "path": "<XRController>{LeftHand}/{Primary2DAxis}",
+                    "interactions": "Sector(directions=1)",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "Stick North",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1709ddcb-4931-4836-bd01-7aa56b335701",
+                    "path": "<XRController>{LeftHand}/{Primary2DAxis}",
+                    "interactions": "Sector(directions=2)",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "Stick South",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "89fa8ab1-bd40-4f92-877b-d8433e971fac",
+                    "path": "<XRController>{LeftHand}/{Primary2DAxis}",
+                    "interactions": "Sector(directions=4)",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "Stick East",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "05a5bb10-5f94-4ca3-a11d-79810978fc2b",
+                    "path": "<XRController>{LeftHand}/{Primary2DAxis}",
+                    "interactions": "Sector(directions=8)",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "Stick West",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9dfbc288-7bb9-4936-b83f-4d6d7b7116b6",
+                    "path": "<XRController>{LeftHand}/{DevicePosition}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "eee4061e-d6e4-4499-9d2e-994dff80b687",
+                    "path": "<XRController>{LeftHand}/{DeviceRotation}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR Controller - Control Scheme",
+                    "action": "Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "Head Mounted Display HMD",
+            "id": "6363fefb-c6a3-45ef-ab6f-350ff39e8e1d",
+            "actions": [
+                {
+                    "name": "Position",
+                    "type": "Value",
+                    "id": "ca206b37-c703-46fe-8640-7760151a9e01",
+                    "expectedControlType": "Vector3",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Rotation",
+                    "type": "Value",
+                    "id": "2095c2a3-f4dd-4717-8ed7-5f04b9f7aa3d",
+                    "expectedControlType": "Quaternion",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "c15eeaba-a519-47fe-a1e6-6bdb595229c5",
+                    "path": "<XRHMD>/{DevicePosition}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR HMD - Control Scheme",
+                    "action": "Position",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a9fa7a5b-c173-4ca1-8077-bfbfb36df35a",
+                    "path": "<XRHMD>/{DeviceRotation}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";XR HMD - Control Scheme",
+                    "action": "Rotation",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "XR Controller - Control Scheme",
+            "bindingGroup": "XR Controller - Control Scheme",
+            "devices": [
+                {
+                    "devicePath": "<XRController>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "XR HMD - Control Scheme",
+            "bindingGroup": "XR HMD - Control Scheme",
+            "devices": [
+                {
+                    "devicePath": "<XRHMD>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}

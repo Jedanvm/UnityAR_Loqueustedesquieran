@@ -1,28 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PuertaControlador : MonoBehaviour
 {
-    public Animator pueltita;
+    public Animator PuertaAnimator;
+    private bool abierta = false;
 
     //open dor pli
     [ContextMenu("Abrilo pelotudo")]
     public void AbrirPuerta() {
         print("abrio la puelta");
-        pueltita.SetBool("ABieltO",true);
+        PuertaAnimator.SetBool("Abrir",true);
     }
     //ta cerra la puelta
     [ContextMenu("Tenes que cerrar la puerta")]
     public void CerrarPuerta()
     {
         print("cerro la puelta");
-        pueltita.SetBool("ABieltO",false);
+        PuertaAnimator.SetBool("Abrir",false);
     }
     //puerta afk
     [ContextMenu("la puelta")]
     public void PuertaCerrada()
     {
         print("puelta dolmida");
+    }
+
+    public void TogglePuerta()
+    {
+        abierta = !abierta;
+        if (abierta)
+        {
+            CerrarPuerta();
+        }
+        else
+        {
+            AbrirPuerta();
+        }
     }
 }

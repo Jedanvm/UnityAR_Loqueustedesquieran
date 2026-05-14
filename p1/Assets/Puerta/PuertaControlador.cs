@@ -25,6 +25,11 @@ public class PuertaControlador : MonoBehaviour
         print("puelta dolmida");
     }
 
+    [Header("Audio")]
+    public AudioSource audioSourcePuerta;
+    public AudioClip sonidoAbrir;
+    public AudioClip sonidoCerrar;
+    
     public void TogglePuerta()
     {
         abierta = !abierta;

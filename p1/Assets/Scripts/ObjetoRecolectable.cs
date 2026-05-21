@@ -1,10 +1,5 @@
 using UnityEngine;
 
-/// <summary>
-/// Adjunta este script a cada objeto recolectable de la escena.
-/// Requiere: AudioSource (x2), Collider con Is Trigger = true, y un tag "Player" en el Character Controller.
-/// El objeto siempre mirará de frente al jugador (billboard) y emitirá un brillo pulsante.
-/// </summary>
 [RequireComponent(typeof(AudioSource))]
 public class ObjetoRecolectable : MonoBehaviour
 {
@@ -32,41 +27,9 @@ public class ObjetoRecolectable : MonoBehaviour
     [Range(0f, 1f)]
     public float volumenMaxOcio = 1f;
 
-    // ── Billboard ─────────────────────────────────────────────────────────────
-    [Header("Billboard - Mirar al jugador")]
-    [Tooltip("Si está activo, el objeto siempre rotará para mirar de frente al jugador.")]
-    public bool activarBillboard = true;
-
-    [Tooltip("Solo rota en el eje Y (horizontal), ideal para objetos 3D que no deben inclinarse.")]
-    public bool soloEjeY = true;
-
-    // ── Brillo ────────────────────────────────────────────────────────────────
-    [Header("Brillo Pulsante (Emission)")]
-    [Tooltip("Activa el efecto de brillo pulsante en el material del objeto.")]
-    public bool activarBrillo = true;
-
-    [Tooltip("Color del brillo. Asegúrate de que el material use shader Standard o URP/Lit con Emission activado.")]
-    public Color colorBrillo = new Color(1f, 0.85f, 0.2f); // Dorado por defecto
-
-    [Tooltip("Intensidad mínima del brillo (en HDR, valores > 1 son válidos).")]
-    public float brilloMinimo = 0.3f;
-
-    [Tooltip("Intensidad máxima del brillo.")]
-    public float brilloMaximo = 2.5f;
-
-    [Tooltip("Velocidad del pulso del brillo.")]
-    public float velocidadPulso = 2f;
-
-    [Tooltip("Renderer del mesh del objeto. Si está vacío, se busca automáticamente en hijos.")]
-    public Renderer rendererObjeto;
-
-    // ── Estado interno ────────────────────────────────────────────────────────
     private Transform jugadorTransform;
     private bool recolectado = false;
-    private Material materialInstancia;
-    private static readonly int EmissionColor = Shader.PropertyToID("_EmissionColor");
 
-    // ─────────────────────────────────────────────────────────────────────────
     void Start()
     {
         // Buscar al jugador por tag
@@ -88,21 +51,12 @@ public class ObjetoRecolectable : MonoBehaviour
         {
             Debug.LogWarning($"[ObjetoRecolectable] '{gameObject.name}': No tiene asignado audioSourceOcio.");
         }
-
-        // Preparar material para el brillo
-        ConfigurarBrillo();
         startPos = transform.position;
     }
 
-    // ─────────────────────────────────────────────────────────────────────────
     void Update()
     {
         if (recolectado) return;
-
-        // 1. Billboard: el objeto mira de frente al jugador
-        if (activarBillboard && jugadorTransform != null)
-            AplicarBillboard();
-
         // 2. Volumen del sonido de ocio según distancia
         if (jugadorTransform != null && audioSourceOcio != null)
         {
@@ -110,76 +64,11 @@ public class ObjetoRecolectable : MonoBehaviour
             audioSourceOcio.volume = CalcularVolumenPorDistancia(distancia);
         }
 
-        // 3. Brillo pulsante
-        if (activarBrillo && materialInstancia != null)
-            AplicarBrilloPulsante();
         float newY = startPos.y + Mathf.Sin(Time.time * floatSpeed) * floatHeight;
 
         transform.position = new Vector3(transform.position.x, newY, transform.position.z);
     }
 
-    // ── Billboard ─────────────────────────────────────────────────────────────
-    /// <summary>
-    /// Rota el objeto para que su frente apunte siempre hacia el jugador.
-    /// </summary>
-    private void AplicarBillboard()
-    {
-        Vector3 direccion = jugadorTransform.position - transform.position;
-
-        if (soloEjeY)
-        {
-            // Ignora diferencia de altura — solo gira horizontalmente
-            direccion.y = 0f;
-        }
-
-        if (direccion.sqrMagnitude < 0.001f) return; // evitar NaN si están solapados
-
-        transform.rotation = Quaternion.LookRotation(direccion);
-    }
-
-    // ── Brillo ────────────────────────────────────────────────────────────────
-    /// <summary>
-    /// Crea una instancia del material para modificar la emisión de forma independiente
-    /// sin afectar a los demás objetos que compartan el mismo material.
-    /// </summary>
-    private void ConfigurarBrillo()
-    {
-        if (!activarBrillo) return;
-
-        // Buscar Renderer automáticamente si no fue asignado
-        if (rendererObjeto == null)
-            rendererObjeto = GetComponentInChildren<Renderer>();
-
-        if (rendererObjeto == null)
-        {
-            Debug.LogWarning($"[ObjetoRecolectable] '{gameObject.name}': No se encontró Renderer para el brillo.");
-            activarBrillo = false;
-            return;
-        }
-
-        // .material crea automáticamente una instancia propia del material
-        materialInstancia = rendererObjeto.material;
-
-        // Activar la keyword de emisión (necesario para Standard y URP/Lit)
-        materialInstancia.EnableKeyword("_EMISSION");
-
-        // Valor inicial del brillo
-        materialInstancia.SetColor(EmissionColor, colorBrillo * brilloMinimo);
-    }
-
-    /// <summary>
-    /// Actualiza el color de emisión del material con un pulso sinusoidal suave.
-    /// </summary>
-    private void AplicarBrilloPulsante()
-    {
-        // Sin(t) oscila entre -1 y 1 → lo normalizamos a 0..1
-        float t = (Mathf.Sin(Time.time * velocidadPulso) + 1f) / 2f;
-        float intensidad = Mathf.Lerp(brilloMinimo, brilloMaximo, t);
-
-        materialInstancia.SetColor(EmissionColor, colorBrillo * intensidad);
-    }
-
-    // ── Audio por distancia ───────────────────────────────────────────────────
     private float CalcularVolumenPorDistancia(float distancia)
     {
         if (distancia >= distanciaMaxima) return 0f;
@@ -188,7 +77,6 @@ public class ObjetoRecolectable : MonoBehaviour
         return Mathf.Lerp(0f, volumenMaxOcio, t);
     }
 
-    // ── Recolección ───────────────────────────────────────────────────────────
     private void OnTriggerEnter(Collider otro)
     {
         if (recolectado) return;
@@ -210,13 +98,6 @@ public class ObjetoRecolectable : MonoBehaviour
             GestorRecolectables.Instancia.RegistrarRecoleccion();
         else
             Debug.LogError("[ObjetoRecolectable] No se encontró GestorRecolectables en la escena.");
-
-        // Apagar brillo antes de ocultar el objeto
-        if (materialInstancia != null)
-            materialInstancia.SetColor(EmissionColor, Color.black);
-
-        if (rendererObjeto != null)
-            rendererObjeto.enabled = false;
 
         Destroy(gameObject, 0f);
     }

@@ -2,11 +2,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-/// <summary>
-/// Singleton que lleva la cuenta de los objetos recolectados.
-/// Soporta múltiples puertas, cada una con su propio requisito de objetos.
-/// Coloca este script en un GameObject vacío llamado "GestorRecolectables" en la escena.
-/// </summary>
 public class GestorRecolectables : MonoBehaviour
 {
     // ── Singleton ─────────────────────────────────────────────────────────────
@@ -29,16 +24,15 @@ public class GestorRecolectables : MonoBehaviour
         [HideInInspector] public bool desbloqueada = false;
     }
 
-    // ── Inspector ─────────────────────────────────────────────────────────────
     [Header("Puertas")]
     [Tooltip("Agrega aquí todas las puertas que quieres desbloquear con objetos recolectables.")]
     public List<ConfiguracionPuerta> puertas = new List<ConfiguracionPuerta>();
 
-    [Header("UI (Opcional)")]
+    [Header("UI")]
     [Tooltip("Texto de UI para mostrar el progreso global de objetos recolectados.")]
     public TMPro.TextMeshProUGUI textoProgreso;
 
-    [Header("Evento personalizado (Opcional)")]
+    [Header("Evento personalizado")]
     [Tooltip("Se invoca cada vez que se recoge un objeto. Pasa (recolectados, totalNecesarioMayor).")]
     public UnityEvent<int, int> onObjetoRecolectado;
 
@@ -73,11 +67,6 @@ public class GestorRecolectables : MonoBehaviour
         }
     }
 
-    // ── Recolección ───────────────────────────────────────────────────────────
-    /// <summary>
-    /// Llamado por cada ObjetoRecolectable al ser recogido.
-    /// Revisa qué puertas se desbloquean con la cantidad actual.
-    /// </summary>
     public void RegistrarRecoleccion()
     {
         objetosRecolectados++;
@@ -99,7 +88,6 @@ public class GestorRecolectables : MonoBehaviour
         }
     }
 
-    // ── UI ────────────────────────────────────────────────────────────────────
     private void ActualizarUI()
     {
         if (textoProgreso != null)
@@ -115,7 +103,6 @@ public class GestorRecolectables : MonoBehaviour
         return max;
     }
 
-    // ── Accesores públicos ────────────────────────────────────────────────────
     public int ObjetosRecolectados => objetosRecolectados;
     public bool TodasDesbloqueadas => puertas.TrueForAll(p => p.desbloqueada);
 }
